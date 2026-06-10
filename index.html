@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Top 3 Pokémon</title>
+    <title>Meu Top 5 Pokémon</title>
 
     <style>
         body {
@@ -12,32 +12,57 @@
             color: white;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         h1 {
             color: gold;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+
+        /* Container que envolve todos os cards para deixá-los lado a lado */
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .pokemon {
             background-color: #2d2d44;
-            margin: 20px auto;
             padding: 20px;
             border-radius: 15px;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+            width: 280px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+
+        /* Efeito visual ao passar o mouse */
+        .pokemon:hover {
+            transform: translateY(-5px);
         }
 
         .pokemon img {
-            width: 200px;
-            height: auto;
-            margin-top: 10px;
+            width: 100%;
+            height: 200px;
+            object-fit: contain; /* Garante que a imagem não fique distorcida */
+            margin-top: 15px;
+            background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil para a imagem */
+            border-radius: 8px;
         }
 
         .posicao {
             color: gold;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
+        }
+
+        h2 {
+            margin: 10px 0 0 0;
+            font-size: 1.6rem;
         }
     </style>
 </head>
@@ -45,27 +70,38 @@
 
     <h1>🔥 Meu Top 5 Pokémon Mais Fodas 🔥</h1>
 
-    <div class="pokemon">
-        <div class="posicao">🥇 1º Lugar</div>
-        <h2>Garchomp</h2>
-        <img src="./img/image.png" alt="Garchomp">
-    </div>
+    <div class="grid-container">
 
-    <div class="pokemon">
-        <div class="posicao">🥈 2º Lugar</div>
-        <h2>Regigigas</h2>
-        <img src="./img/image copy.png" alt="Regigigas">
-    </div>
+        <div class="pokemon">
+            <div class="posicao">🥇 1º Lugar</div>
+            <h2>Garchomp</h2>
+            <img src="./img/image.png" alt="Garchomp">
+        </div>
 
-    <div class="pokemon">
-        <div class="posicao">🥉 3º Lugar</div>
-        <h2>Dragapult</h2>
-        <img src="./img/image copy 2.png" alt="Dragapult">
-    </div>
-<div class="pokemon">
-        <div class="posicao"> 4º Lugar</div>
-        <h2>Zygarde</h2>
-        <img src="./image/zygarde.jpeg" alt="Zygarde>
+        <div class="pokemon">
+            <div class="posicao">🥈 2º Lugar</div>
+            <h2>Regigigas</h2>
+            <img src="./img/image copy.png" alt="Regigigas">
+        </div>
+
+        <div class="pokemon">
+            <div class="posicao">🥉 3º Lugar</div>
+            <h2>Dragapult</h2>
+            <img src="./img/image copy 2.png" alt="Dragapult">
+        </div>
+
+        <div class="pokemon">
+            <div class="posicao">🏅 4º Lugar</div>
+            <h2>Zygarde</h2>
+            <img src="./img/zygarde.jpeg" alt="Zygarde"> 
+        </div>
+
+        <div class="pokemon">
+            <div class="posicao">🏅 5º Lugar</div>
+            <h2>Swampert</h2>
+            <img src="./img/swampert.jpeg" alt="Swampert">
+        </div>
+
     </div>
 
 </body>
